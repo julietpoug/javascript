@@ -140,7 +140,7 @@
         */
         document.write('<h2> 4- types de donnees</h2>');
 
-    // les 3 principaux types de données (appalés primitif) sont: les string(chaine de caractères) / number (données numériques)/ boolean (données boolléennes vrai ou faux)
+        // les 3 principaux types de données (appalés primitif) sont: les string(chaine de caractères) / number (données numériques)/ boolean (données boolléennes vrai ou faux)
 
         // les string:
         var monTexte="Voici une phase écrite dans un double quote";
@@ -184,6 +184,7 @@
         const BOUGE_PAS = 'ma constante impossible à modifier';
         document.write(BOUGE_PAS+ '<br>');
         // const BOUGE_PAS = 'nouveau contenu'; induira des messages d'erreur que d'essayer de redefinir une constante
+        
 
                 
          /*
@@ -472,21 +473,148 @@
 
         */ 
 
-     /*
-    -------------------------------------------------10 BOUCLES----------------------------------------------
-    */
-    document.write('<h2> 10- BOUCLES </h2>');
+         /*
+        -------------------------------------------------10 BOUCLES----------------------------------------------
+        */
+        document.write('<h2> 10- BOUCLES </h2>');
+
+        // les boucles while
+
+        var i = 0;
+         while(i <= 6){
+            document.write((i +1) + '---')
+            i++; // i= i+1 // i++ permet d'incrementer ma variable
+        }
+
+        // boucle while avec condition
     
+        var i = 0;
+        while(i <= 6){
 
-    var i = 1;
-    while(i <= 6){
-        document.write((i +1) + '---');
-        i++; // i= i+1 // i++ permet d'incrementer ma variable
-    }
+            if(i===6){
+                document.write(i + '<br>');
+            }
+            else{
+                document.write((i +1) + '---');
+            }
+             i++; // i= i+1 // i++ permet d'incrementer ma variable
+        }
     
+        // les boucles for
+        for(var p=0; p <=6; p++ ){
+
+            document.write(p + '---');
+        }
+        // boucles for avec condition
+        for(var p=0; p <=6; p++ ){
+
+            if(p===6){
+            document.write(p + '<br>');
+             }
+            else{
+                    document.write((p +1) + '---');
+            }
+        }
+
+         /*
+        -------------------------------------------------11 FONCTIONS PREDEFINIES----------------------------------------------
+        */
+        document.write('<h2> 11-FONCTIONS PREDEFINIES </h2>');
+        /*
+        comme tous les langages de programation js possède des fonctions.
+        Ce sont des morceaux de code encapsulés qu'on appellle au besoin pour executer une action prècise.
+        On distingue les fonctions prédefinies et les fonctions utilisateurs (crées par nous meme)
+    
+        */ 
+        var phrase = 'Salut, je m\'appelle Eddy.';
+        var numero = 122;
+        // cette variable contient du texte, c'est en réalité un objet string qui possède plusieurs méthodes et une propriété.
+
+        // length (propriété)
+        console.log(phrase.length);
+
+        // indexOf  et le lastIndexOf retourne la position de la première lettre de Eddy dans la phrase 
+         console.log(phrase.indexOf('Eddy'))
+
+        //  substr permet de recuperer le morceau d'une chaine de caractère, il prend 2 arguments: 1er où commence la découpe, second: combien de caractères
+        phrase = 'Bonjour Pierre comment vas tu?';
+        console.log(phrase.substr(0,7));
+        var mot = 'Pierre'
+        console.log(phrase.substr(8,mot.length));
+        // ou 
+        console.log(phrase.substr(phrase.indexOf('Pierre'),mot.length));
+        
+        // cf ce lien https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/prototype
+
+        // toLowerCase  et toUpperCase
+
+        phrase = 'tout est en minuscule'; 
+        document.write(phrase.toUpperCase());
+
+        // mettre une phrase en majuscule
+        phrase = phrase.toUpperCase();
+
+        // remettre la phrase en minuscule
+        console.log(phrase.toLowerCase());
+
+         /*
+        -------------------------------------------------12 FONCTIONS UTILISATEURS----------------------------------------------
+        */
+        document.write('<h2> 12-FONCTIONS UTILISATEURS </h2>');
+        
+        // Déclaration de fonction par FUNCTION STATAMENT
+
+        // création de fonction simple 
+        function maFonction(){
+            return document.write('<p> Nous avons une journée ensoleillée ! </p>');
+        }
+        maFonction();
+
+        // cration de fonction avec argument: l'argument ici c'est (prenom), il est facultatif et il permet d'indiquer que l'appel de la fonction necessite également une information de l'utilisateur. L'argument est définit par un mot clé, et les intructions de la fonction sont sensés reprendre ce mot clé pour signifier ce que l'on fait de cette information
+
+        function direBonjour(prenom){
+            var message = document.write('<p> Bonjour ' + prenom + ', comment vas tu ?</p>');
+            return message;
+        }
+        direBonjour();
+        direBonjour('Juliette')
+
+        function meteo (saison, temperature){
+            return document.write('Nous sommes en ' + saison + ', il fait' + temperature + 'degré(s)' +'<br>');
+
+        }
+        meteo('été', 25);
+        meteo('hiver', 5);
+
+        // fonction avc conditions
+
+        function meteo (saison, temperature){
+            var e;
+            if (saison == 'printemps'){
+                e = 'au'
+            }
+            else{
+                e ='en'
+            }
+            return document.write('Nous sommes en ' + saison + ', il fait' + temperature + 'degré(s)' +'<br>');
+        }
+        meteo('printemps', 25);
+        
 
 
 
-        </script>
-    </body>
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
 </html>

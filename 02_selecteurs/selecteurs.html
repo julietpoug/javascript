@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selecteurs Javascript</title>
+    <style>
+        .test{ color: red; font-weight: bold;}
+
+    </style>
+
+    <script>
+
+        window.onload = function(){
+        // SELECTION NATURELLE D'UN ID
+
+        var monId = titre;
+        console.log(monId);
+
+        // SELECTION BY ID
+
+        var monId2 = document.getElementById('titre');
+        console.log(monId2);
+
+         // SELECTION BY CLASSNAME
+
+         var mesClasses = document.getElementsByClassName('avion');
+        //  je recupere un ensemble: une collection html
+         console.log(mesClasses); 
+
+        //  je peux atteindre un des elements de la collection grace à l'indice [1]
+         console.log(mesClasses[1]); 
+
+        //  innerHTML definit le contenu de la balise
+        console.log(mesClasses[1].innerHTML); 
+        mesClasses[1].innerHTML = 'Nouveau contenu';
+
+        // modifier le contenu du h2 pour marquer 'nouveau titre'
+        // recupere dans une variable la selection de mon id
+
+        var monId3 = document.getElementById('titre');
+        console.log(monId3);
+        
+        // definition d'un nouveau titre via innerHTML
+        console.log(monId.innerHTML);
+        monId.innerHTML = 'noveau titre';
+
+
+        // LA SELECTION BY TAGNAME (Nom de balise)
+        var mesP = document.getElementsByTagName('P');
+        console.log(mesP);
+        console.log(mesP[1].innerHTML);
+
+
+        // LA SELECTION BY TAGNAME (Nom de balise) AVEC LA BOUCLE
+
+        var mesP = document.getElementsByTagName('P');
+        console.log(mesP);
+
+        for(var i=0; i < mesP.length; i++){
+            
+            console.log(mesP[i].innerHTML);
+        }
+
+
+        // LA SELECTION BY TAGNAME (Nom de balise) AVEC LA BOUCLE  ET STYLE
+        // cf le lien pour la liste des mots clés à appliquer avec .style https://www.w3schools.com/jsref/dom_obj_style.asp
+
+        for(var i=0; i < mesP.length; i++){
+            
+            console.log(mesP[i].innerHTML);
+            mesP[i].style.color = 'red'; 
+            mesP[i].style.backgroundColor = 'yellow'; 
+            mesP[i].style.marginTop = '100px'; 
+
+        }
+
+
+        // LES METHODES POUR SELSCTIONNER: 
+        // querySelector ( ici je mets des elements css de mon choix comme les h, les id, les classes...)
+
+        var query =document.querySelector('#titre')
+        console.log(query);
+
+        // querySelectorAll (slectionne tous les elements de la classe et on choisit)
+
+        var query2 = document.querySelectorAll('.avion');
+        console.log(query2[2]);
+
+
+        // selectionner le airbus 3 : modifie son contenu en "mon airbus"
+        // de plus stylisez cet airbu 3 pour y appliquer un fond bleu, un texte blanc et gras
+
+        var mesClasses = document.getElementsByClassName('avion');
+         console.log(mesClasses); 
+         console.log(mesClasses[2]); 
+        console.log(mesClasses[2].innerHTML); 
+        mesClasses[2].innerHTML = 'Mon airbus';
+        mesClasses[2].style.backgroundColor = 'blue'; 
+        mesClasses[2].style.color = 'white'; 
+        mesClasses[2].style.fontWeight = 'bold'; 
+
+        // correction en selectionnant tous les div
+        var query3 = document.querySelectorAll('div.avion');
+        console.log(query3[1]);
+        query3[1].innerHTML = 'mon airbus';
+        query3[1].style.backgroundColor = 'red';
+        query3[1].style.color = 'white';
+        query3[1].style.fontWeight = 'bold';
+        query3[1].style.padding = '20px';
+        
+
+
+
+    
+        } // fin de mon window.onload ne pas effacer
+
+     </script>
+
+
+</head>
+
+<body>
+    <div id="conteneur">
+
+        <h2 id="titre">Mon titre de niveau 2</h2>
+        <div class="avion">AirBus1</div>
+        <div class="avion">AirBus2</div>
+        <div class="avion">AirBus3</div>
+
+        <p id="first">Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+        <p title="Infobulle">Paragraphe 3</p>
+        <p>Paragraphe 4</p>
+        <p>Paragraphe 5</p>
+
+        <h2>Mon titre de fin</h2>
+        
+    
+    </div>
+
+
+
+
+</body>
+</html>
