@@ -86,8 +86,8 @@
         // affectation de la valeur via un promt à remplir par l'utilisateur
         // exemple de déclaration et d'affectation dans la même instruction
 
-        var sonAge = prompt('Quel est votre âge?');
-        document.write(sonAge);
+        // var sonAge = prompt('Quel est votre âge?');
+        // document.write(sonAge);
 
         // posibilité de déclarer un ensemble de variables
         var prenom = 'sylvie', nom = 'Dupont', genre = 'Feminin';
@@ -197,21 +197,296 @@
 
         document.write(prenom + " " + nom + '<br>');
         
-        document.write('<strong>'+prenom+'</strong>' + " " + nom);
+        document.write('<strong>'+ prenom +' ' + nom + '</strong>');
+        document.write('<span style="color: red;">'+ prenom +' ' + nom + '</span>');
 
         // réaliser un prompt demandant son âge à l'utilisateur, récuperer cette donnée et l'utiliser pour afficher : vous avez xx ans!
         
-        var definitionAge = prompt('Quel est votre âge?');
-        document.write('vous avez' + definitionAge + 'ans');
+        // var definitionAge = prompt('Quel est votre âge?');
+        // document.write('vous avez' + definitionAge + 'ans');
+
+                 /*
+        -------------------------------------------------7 OPERATEURS ARITHMETIQUES----------------------------------------------
+        */
+        document.write('<h2> 7- OPERATEURS ARITHMETIQUES</h2>');
+
+        // additions
+        var addition = 10 + 5;
+        document.write(addition +'<br>'); //  resultat 15
+
+        // soustraction
+        var soustraction = 16 - 4;
+        document.write(soustraction +'<br>');
+
+        // multiplication
+        var multiplication = 5 * 4;
+        document.write(multiplication +'<br>');
+
+        // division
+        var division = 20 / 4;
+        document.write(division +'<br>');
+
+        // modulo (j'ai 10 billes pour 3 personnes il me reste 1 bille)
+        var modulo = 10 % 3;
+        document.write(modulo +'<br>'); // resultat 1
+
+        var chiffre1 = 10, chiffre2 = 5;
+        var resultat = chiffre1 + chiffre2;
+        document.write(resultat +'<br>'); // resultat 15
+
+        var chiffre3 = 10, chiffre4 = 5;
+        var resultat = chiffre3 / chiffre4;
+        document.write(resultat +'<br>'); // resultat 2
+
+        var chiffre5 = 20;
+        chiffre5 = chiffre5 + 10;
+        document.write(chiffre5 +'<br>'); // resultat 30
+
+        chiffre5 += 5;
+        document.write(chiffre5 +'<br>'); // resultat 35
+
+        chiffre5 -= 5;
+        document.write(chiffre5 +'<br>'); // resultat 25
+
+        chiffre5 /= 5;
+        document.write(chiffre5 +'<br>'); // resultat 6
+        
+        chiffre5 *= 5;
+        document.write(chiffre5 +'<br>'); // resultat 
+
+        chiffre5 %= 5;
+        document.write(chiffre5 +'<br>'); // resultat 0
+
+        // recuperer dans un prompt la valeur souhaitée par l'utilisateur.
+        // envoyer une alerte indiquant le résultat au carré et au cube
+
+        var proposition = prompt('veuillez entrer une valeur')
+        console.log(proposition );
+        var carre = proposition * proposition;
+        var cube = proposition * proposition * proposition;
+        alert('Pour' + proposition + 'le carré est : ' + carre +', le cube est: ' + cube); 
+
+        
+         /*
+        -------------------------------------------------8 CONDITIONS----------------------------------------------
+        */
+        // les conditions nous permettent de faire de la programation
+        document.write('<h2> 8 - CONDITIONS </h2>');
+
+        // If et else
+        
+        var a = 10, b = 5, c = 2;
+
+        if(a > b){
+            document.write('A est supérieur à B');
+        }
+        else{
+            document.write('A n\'est supérieur à B');
+
+        }
+
+        // condition égale (on utilise le == pour la comparaison parceque = simple correspond à une affectation)
+
+        var a = 5, b = 5, c = 2;
+
+        if(a == b){
+            document.write('A est égal à B');
+        }
+        else{
+            document.write('A est différent de B');
+        }
+
+        // condition triple égal
+
+        var a = '5', b = 5, c = 2;
+
+        if(a === b){
+            document.write('A est égal à B');
+        }
+        else{
+            document.write('A est différent de B');
+        }
+
+
+        // if et AND
+        if (a > b  && b > c){
+            document.write('ok pour les deux conditions <br>');
+        }
+        else{
+        document.write('une condition au moins, n\'est pas remplie <br>');
+        }
+
+        // if et OR
+        if (a > b  || b > c){
+            document.write('ok au moins l\'une des conditions est valable <br>');
+        }
+        else{
+        document.write('aucune des conditions n\'est pas remplie <br>');
+        }
+
+        // if multiples
+
+        if(a < 5){
+            document.write('A est inférieur à 5 <br>');
+        }
+        else if(a == 5){
+            document.write('A est égal à 5 <br>');
+        }
+        else if(a > 5){
+            document.write('A est supérieur à 5 <br>');
+        }
+        else{
+            document.write('A n\'est sans doute pas un nombre <br>');
+        }
+
+        // isNaN (is Not a Number)
+
+        var chiffre6 =50, chiffre7 ='100', chiffre8 = 'vingt';
+        if(!isNaN(chiffre7)){
+            document.write('Ceci est bien un nombre');
+        }
+        else{
+            document.write('Ceci n\'est pas un nombre');
+        }
+
+        var total = chiffre6 + chiffre7
+        console.log(total);
+        // parseInt () est une méthode me permettant de transformer un string en number 
+
+        console.log(typeof(chiffre7));
+        var parse = parseInt(chiffre7);
+        console.log(typeof(parse));
+
+        console.log(chiffre6 + parse);
+
+        document.write('<p> +(chiffre6 + chriffre7) + </p>');
+
+        var chiffre9 = 182.66
+        console.log(parseInt(chiffre9));
+        // l'équivalent du parseInt pour les décimaux: parsefloat()
+        console.log(parseFloat(chiffre9)); 
+
+        // il existe une méthode pour passer number en string  et c'est toString ()
+        var chiffre10 = chiffre6.toString();
+        console.log(typeof(chiffre10))
+        
+        // CONDITION SWITCH
+        var couleur= "vert";
+
+        switch(couleur){
+            case 'bleu' : 
+                document.write('Vous aimez le bleu <br>');
+            break;
+
+            case 'rouge' : 
+                document.write('Vous aimez le rouge <br>');
+            break;
+
+            case 'vert' : 
+                document.write('Vous aimez le vert <br>');
+            break;
+
+            default :
+                document.write('Vous n\'aimez ni rouge ni le bleu ni le vert <br>');
+            break;
+        }
+
+        // même chose avec les if et else
+
+        var couleur1= "orange";
+
+        if(couleur1=="bleu"){
+            document.write('Vous aimez le bleu en if<br>');
+        }
+        else if(couleur1=="rouge"){
+            document.write('Vous aimez le rouge en if <br>');
+        }
+        else if(couleur1=="vert"){
+            document.write('Vous aimez le vert en if<br>');
+        }
+        else{
+            document.write('Vous n\'aimez ni rouge ni le bleu ni le vert en if <br>');
+        }
+
+        // NB parmi les SWITCH et des IF, les switch sont plus rapide
+
+         /*
+        -------------------------------------------------9 OPERATEURS----------------------------------------------
+        */
+        document.write('<h2> 9 - OPERATEURS </h2>');
+        /*
+        Exemples: var1 = 3, var2 = 4;
+
+        Egal (==) va renvoyer TRUE si les operandes sont égales en valeur
+        3 == var1
+        '3' == var1
+        3 == '3'
+
+        egal (===) va renvoyer TRU si les operande sont égales en VALEUR et en TYPE
+        3 === var1
+
+        Different de (!=) vont renvoyer TRUE si les operandes  NE SONT PAS EGALES
+        4 != var1
+        var2 != var1
+
+        Different de (!==) vont renvoyer TRUE si les operandes  ne sont pas du même type ET/ OU pas égales
+
+        Supérieur à (>) vont renvoyer TRUE si l'operande  de gauche est supérieur à l opérande de droite
+
+        inférieur à (<) vont renvoyer TRUE si l'operande  de gauche est plus petite que l opérande de droite
+
+        Supérieur ou égal  (>=) vont renvoyer TRUE si l'operande  de gauche est supérieur ou égale à l opérande de droite
+
+        inférieur ou égal  (<=) vont renvoyer TRUE si l'operande  de gauche est inférieur ou égale à l opérande de droite
+
+        CONCLUSION : une condition renvoie tjr TRUE ou FALSE et les instructions de la conditions ne seront executées QUE si la valeur de retour est TRUE
+
+        isNaN (is not a number) va renvoyer TRUE si l'élément testé est bien différent d'un nombre (on utilisera !isNaN pour vérifier que l'élément soit bien un nombre)
+
+        Javascript compte 3 opérateurs logiques
+        - AND --> &&
+        - OR --> ||
+        - NOT --> !
+
+        L'opérateur AND
+        Il s'écrit &&. Il evalue le resultata en TRUE si les deux expressions sont TRUE
+        Si l'une des expressions est taitée en FALSE, alors le resultat sera false.
+        true && true => TRUE
+        true &&  flase => FALSE
+        flase && true => FALSE
+        flase && flase => FALSE
+       
+        L'opérateur OR
+        Il s'écrit ||. Il evalue le resultata en TRUE si l'une ou l'autre ou les deux expressions sont TRUE
+        Si les deux expressions sont FALSE, alors le resultat sera false.
+        true || true => TRUE
+        true ||  flase => TRUE
+        flase || true => TRUE
+        flase || flase => FALSE
+
+        
+        L'opérateur NOT (l'inverse de)
+        Il s'écrit !. Il transforme ce qui est TRUE en FALSE, et ce qui est FALSE en TRUE
+        !true => FALSE
+        !false => TRUE
+
+        */ 
+
+     /*
+    -------------------------------------------------10 BOUCLES----------------------------------------------
+    */
+    document.write('<h2> 10- BOUCLES </h2>');
+    
+
+    var i = 1;
+    while(i <= 6){
+        document.write((i +1) + '---');
+        i++; // i= i+1 // i++ permet d'incrementer ma variable
+    }
+    
 
 
 
-
-
-
-
-
-
-    </script>
-</body>
+        </script>
+    </body>
 </html>
