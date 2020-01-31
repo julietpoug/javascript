@@ -1,0 +1,956 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1036{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Symbol;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl240\slmult1\qj\f0\fs28\lang12\par
+\par
+Courte introduction au d\'e9veloppement web\par
+Dans le monde du Web, plusieurs technologies sont majoritairement utilis\'e9es afin de donner vie aux sites.\par
+Le HTML est utilis\'e9 pour d\'e9finir la structure d\rquote une page, le CSS pour la d\'e9corer et enfin le JavaScript pour tout le c\'f4t\'e9 d\'e9veloppement c\'f4t\'e9 client.\par
+\par
+Le d\'e9veloppement concerne la logique, les calculs et le traitement de donn\'e9es.\par
+Le d\'e9veloppement c\'f4t\'e9 client (ou d\'e9veloppement front-end) est tout ce qui est trait\'e9 par le navigateur et affich\'e9 au visiteur.\par
+Le d\'e9veloppement en JavaScript permet principalement de r\'e9agir aux actions de l'utilisateur, directement dans le navigateur.\par
+\par
+Les qualit\'e9s requises : rigueur, capacit\'e9 d'abstraction\par
+Tout d\'e9veloppeur, et par extension tout d\'e9veloppeur web, doit savoir faire preuve de rigueur dans l\rquote\'e9criture de son code.\par
+\par
+Quand les navigateurs lisent le code afin d\rquote essayer de le comprendre et l\rquote interpr\'e9ter, ils tr\'e9buchent facilement sur toute action qui serait mal \'e9crite.\par
+\par
+Il faut ainsi faire extr\'eamement attention et se relire constamment car un signe \'e9crit deux fois au lieu d\rquote une peut inverser la signification enti\'e8re du code!\par
+\par
+Un d\'e9veloppeur doit aussi savoir faire preuve d\rquote abstraction : quand il fait face \'e0 un probl\'e8me qu\rquote il doit r\'e9soudre, il doit savoir fractionner celui en morceaux plus digestes et aussi garder une vue d\rquote ensemble de ce qu\rquote il \'e9crit.\par
+\par
+Avant de commencer \'e0 \'e9crire, il doit \'eatre capable de s\rquote imaginer le r\'e9sultat du code qu\rquote il va ex\'e9cuter.\par
+\par
+Intro \'e0 JavaScript\par
+\par
+\par
+La version actuelle de JavaScript est une impl\'e9mentation d\rquote un langage de script appel\'e9 EcmaScript. EcmaScript est une standardisation d\rquote une ancienne version de JavaScript cr\'e9\'e9e par Netscape dans les ann\'e9es 90.\par
+\par
+\'c0 l\rquote origine, ce langage a \'e9t\'e9 d\'e9velopp\'e9 dans le but de rajouter un syst\'e8me d\rquote int\'e9ractions aux pages Web, qui \'e9taient compl\'e8tement statiques.\par
+\par
+Il \'e9tait ainsi devenu possible de :\par
+\par
+    D\'e9finir une action au clic\par
+    V\'e9rifier des donn\'e9es entr\'e9es dans un formulaire\par
+    D\'e9tecter les changements de page et lancer une alerte\par
+S\'e9paration des concepts : JS = int\'e9ractions\par
+Ce qui est affich\'e9 par le navigateur se r\'e9sume \'e0 l\rquote int\'e9raction entre le HTML, le CSS et le JavaScript.\par
+Chacune de ses technologies a un r\'f4le tr\'e8s diff\'e9rent des autres. La rigueur du d\'e9veloppeur est de mise ici, car il faut retenir que :\par
+\par
+    Tout ce qui sert \'e0 structurer l\rquote information sur la page se retrouve dans un fichier .html\par
+    Tout ce qui sert \'e0 habiller et d\'e9corer cette page (couleurs, tailles de texte, etc.) se retrouve dans le .css\par
+    Toute la logique, les calculs et les int\'e9ractions utilisateur se retrouvent dans le JavaScript.\par
+\par
+Une des r\'e8gles de base est de ne pas m\'e9langer ces concepts afin de faciliter le d\'e9veloppement.\par
+\par
+    Pas de r\'e8gles CSS dans le JavaScript\par
+    Pas de balises HTML dans le JavaScript\par
+\par
+Les variables\par
+\par
+Une variable est un contenant, un r\'e9ceptacle, permettant d'y stocker des valeurs.\par
+\par
+Il est possible de cr\'e9er une variable en lui donnant un nom, de lui assigner une valeur, de modifier celle-ci ou de la supprimer.\par
+Par exemple :\par
+Si une personne marche vers un magasin, le nombre de m\'e8tres entre le magasin et la personne diminue avec le temps. On pourrait alors stocker cette distance dans une variable, nomm\'e9e par exemple d.\par
+\par
+\'c0 un certain moment, la personne se trouve \'e0 une distance de 10 m\'e8tres du magasin. Notre variable d a alors comme valeur 10.\par
+\par
+Plus tard, la personne a avanc\'e9, et se trouve \'e0 une distance de 9 m\'e8tres. Notre variable vaut maintenant 9.\par
+En JavaScript, si je veux assigner un montant de 10 \'e0 une variable d\par
+d = 10\par
+Maintenant que la personne a avanc\'e9 vers le magasin, je peux modifier la variable d\par
+d = 9\par
+Les instructions\par
+Un script .js (JavaScript) est un fichier contenant plusieurs instructions, plac\'e9es les unes \'e0 la suite des autres. Chacune de ces instructions peut \'eatre vue comme un ordre que vous donner au moteur JavaScript, une action que vous souhaitez r\'e9aliser, \'e0 la mani\'e8re d'une recette de cuisine :\par
+Faire fondre le beurre\par
+\par
+M\'e9langer le beurre et la farine\par
+\par
+Verser le chocolat petit \'e0 petit\par
+\par
+Les instructions se suivent et sont effectu\'e9es les unes \'e0 la suite des autres, du haut vers le bas.\par
+\par
+Chaque instruction doit se terminer par un point-virgule ; afin d\rquote indiquer au moteur JavaScript que cette instruction est termin\'e9e.\par
+\par
+//premi\'e8re instruction (cr\'e9e une variable nomm\'e9e prenom et lui assigne une valeur)\par
+\par
+prenom = "G\'e9rard";\par
+//seconde instruction, lue et interpr\'e9t\'e9e apr\'e8s la pr\'e9c\'e9dente (affiche une fen\'eatre avec le prenom \'e9crit \'e0 l'int\'e9rieur)\par
+\par
+alert(prenom);\par
+Les types de donn\'e9es\par
+\par
+Tout langage de programmation poss\'e8de plusieurs type de donn\'e9es.\par
+\par
+En fran\'e7ais, "bonjour, je m\rquote appelle Bob" correspond \'e0 une phrase et 23 \'e0 un nombre.\par
+\par
+En Javascript, nous avons, entre autres :\par
+    string (cha\'eene de caract\'e8res) correspond \'e0 notre concept de phrase et sert \'e0 repr\'e9senter toute donn\'e9e textuelle : salutation = "Bonjour, comment allez-vous?"\par
+    number (nombre) est utilis\'e9 pour les nombres qu\rquote ils soient entiers ou flottants.\par
+\par
+Un entier est un nombre sans d\'e9cimale, par exemple 25\par
+Un flottant est un nombre avec une d\'e9cimale (s\'e9par\'e9e par un point et non une virgule), par exemple 36.1452\par
+    boolean est un type sp\'e9cial tr\'e8s utilis\'e9 en logique. Ne peut contenir que deux valeurs: true (vrai) et false (faux).\par
+\par
+    array et object sont utilis\'e9s pour contenir des listes.\par
+\par
+array, ou tableau en fran\'e7ais, est utilis\'e9 pour des listes simples : liste = [12, 15, "pomme"];\par
+object est une liste contenant des associations.\par
+\par
+Si je veux lister le contenu de mon frigo et le trier par type d\rquote aliments :\par
+\par
+frigo = \{\par
+\par
+   "fruits" : ["pomme", "poire", "banane"],\par
+\par
+   "legumes" : ["tomate", "poireau"],\par
+\par
+   "laitages" : ["yaourt", "lait"],\par
+\par
+\};\par
+\par
+Op\'e9rations et concat\'e9nation\par
+\par
+Les op\'e9rations sur les nombres s\rquote apparentent \'e0 ceux sur calculatrice :\par
+\par
+    + pour l\rquote addition\par
+    - pour la soustraction\par
+    * pour la multiplication\par
+    / pour la division\par
+\par
+operation1 = 1+2; // operation1 contient maintenant 3\par
+\par
+operation2 = 8-4; // operation2 contient maintenant 4\par
+\par
+operation3 = 6*3; // operation3 contient maintenant 18\par
+\par
+operation4 = 10/2; // operation4 contient maintenant 5\par
+Le + peut aussi \'eatre utilis\'e9 sur des cha\'eenes de caract\'e8res, ce qui aura pour effet de coller les diff\'e9rents textes les uns \'e0 la suite des autres. Cette op\'e9ration s\rquote appelle une concat\'e9nation :\par
+\par
+ma_chaine = "je m\rquote appelle" + " bob"; // ma_chaine contient maintenant "je m\rquote appelle bob"\par
+\par
+% modulo sert \'e0 r\'e9cup\'e9rer le reste d\rquote une division\par
+\par
+operation1 = 10%2 // operation1 contient 0, car il n'y a pas de reste\par
+\par
+operation2 = 17%3 // operation2 contient 2, car 17 / 3 = 5 (plus un reste de 2)\par
+\par
+Dans le cas des tableaux (ou arrays), je peux r\'e9cup\'e9rer une valeur si je connais son index (emplacement dans le tableau).\par
+J'utiliserai l'expression tableau[index]\par
+\par
+L\rquote index commence toujours \'e0 0, ainsi le deuxi\'e8me \'e9l\'e9ment de la liste est \'e0 l\rquote index 1.\par
+\par
+fruits = ["pomme", "poire", "banane"];\par
+\par
+un_fruit = fruits[1]; // un_fruit contient "poire"\par
+\par
+Je peux faire de m\'eame avec un object si je connais la cl\'e9 avec l'expression objet["cle"] ou objet.cle\par
+\par
+frigo = \{\par
+\par
+   "fruits" : ["pomme", "poire", "banane"],\par
+\par
+   "legumes" : ["tomate", "poireau"],\par
+\par
+   "laitages" : ["yaourt", "lait"]\par
+\par
+\};\par
+\par
+mes_fruits = frigo.fruits; // mes_fruits contient ["pomme", "poire", "banane"]\par
+\par
+mes_legumes = frigo["legumes"]; // mes_legumes contient ["tomate", "poireau"]\par
+\par
+ \par
+\par
+La console\par
+Chaque navigateur dispose d\rquote un outil qui permet d\rquote inspecter les diff\'e9rents constituants de la page (HTML, CSS, Javascript).\par
+Dans cet inspecteur, on peut trouver une console qui dispose d\rquote un interpr\'e9teur et qui peut \'eatre utilis\'e9e pour ex\'e9cuter du code JavaScript.\par
+On peut y \'e9crire une ou plusieurs instructions, que l\rquote on peut ex\'e9cuter en appuyant sur entr\'e9e.\par
+\par
+Par exemple :\par
+\par
+4+5; // Affiche 9\par
+\par
+ Une fonctionnalit\'e9 extr\'eamement importante de la console est console.log() qui permet d\rquote y afficher une information de son choix.\par
+\par
+Dans le code qu\rquote on \'e9crit dans le fichier JavaScript, on peut ainsi \'e9crire:\par
+\par
+ma_variable = 8;\par
+\par
+console.log(ma_variable); // La console du navigateur affiche 8\par
+\par
+Indentation et commentaires\par
+\par
+ L\rquote indentation, qui consiste en l\rquote ajout d\rquote espaces ou tabulations en d\'e9but de ligne pour lire plus facilement le code, n\rquote est pas prise en compte par le navigateur mais est primordiale pour le d\'e9veloppeur.\par
+\par
+Elle permet d\rquote analyser beaucoup plus facilement son code ou celui d\rquote un autre et permet d\rquote aider \'e0 visualiser le chemin que parcourt l\rquote information.\par
+\par
+De plus, une erreur de structure comme un oubli de parenth\'e8se est plus facilement identifiable.\par
+\par
+Les commentaires, qu\rquote ils soient en\par
+\par
+// ligne\par
+\par
+ou bien\par
+\par
+/*\par
+\par
+En bloc\par
+\par
+*/\par
+\par
+aident \'e0 la compr\'e9hension et sont \'e0 utiliser \'e0 volont\'e9 pour expliquer \'e0 quoi sert un ligne ou un bloc de code.\par
+\par
+// Cette fonction sert \'e0 calculer le nombre d'ann\'e9es qui nous s\'e9parent du prochain mill\'e9naire\par
+\par
+ \par
+/*\par
+\par
+J'ai mis tel code pour telle raison\par
+\par
+Se r\'e9f\'e9rer \'e0 la documentation sur tel site pour plus d'explications\par
+\par
+*/\par
+\par
+Un code bien indent\'e9 et bien comment\'e9 permet de s'y replonger facilement, et aide le d\'e9veloppement en \'e9quipe : reprendre le code mal indent\'e9 d\rquote un autre est comme relire un texte bourr\'e9 de fautes et sans espace... c'est possible, mais d\'e9sagr\'e9able !\par
+\par
+ \par
+Les erreurs\par
+\par
+En JavaScript, les erreurs ne pardonnent pas. Si l\rquote interpr\'e9teur voit une variable qu\rquote il ne connait pas, une op\'e9ration sur un mauvais type de donn\'e9e ou autre erreur, il s\rquote arr\'eate imm\'e9diatement et le code qui se trouve apr\'e8s n\rquote est pas ex\'e9cut\'e9. Si un script ne fonctionne pas comme il devrait, il faut aller v\'e9rifier la console de l\rquote inspecteur en premier. Toutes les erreurs sont affich\'e9es dedans.\par
+\par
+Uncaught SyntaxError est affich\'e9e quand une erreur de code est trouv\'e9e (parenth\'e8se mal ferm\'e9e, mot cl\'e9 inattendu, etc.)\par
+\par
+\ldblquote pomme\rdblquote  + p\rdblquote oire\rdblquote  // Uncaught SyntaxError\par
+\par
+1 + else // Uncaught SyntaxError\par
+\par
+Uncaught ReferenceError signifie que le code fait appel \'e0 une variable qui n\rquote a pas \'e9t\'e9 d\'e9clar\'e9e. Attention aux fautes de frappe !\par
+\par
+e = 5;\par
+\par
+console.log(f); // Uncaught ReferenceError: f is not defined\par
+\par
+    Les fonctions\par
+Une fonction est un bloc constitu\'e9 de plusieurs instructions qu\rquote on peut ex\'e9cuter \'e0 sa guise.\par
+Le mot-cl\'e9 function doit \'eatre suivi de parenth\'e8ses (), puis d\rquote accolades \{\} qui contiendront les instructions.\par
+Pour garder une r\'e9f\'e9rence \'e0 la fonction, on peut:\par
+\par
+Mettre un nom apr\'e8s le mot-cl\'e9 function\par
+\par
+function bonjour()\{\par
+\par
+   console.log("Bonjour!");\par
+\par
+\}\par
+\par
+Ou assigner la fonction \'e0 une variable\par
+\par
+bonjour = function()\{\par
+\par
+   console.log("Bonjour!");\par
+\par
+\}\par
+\par
+bonjour contient une r\'e9f\'e9rence \'e0 la fonction. On pourrait dire qu\rquote elle pointe du doigt la fonction elle-m\'eame.\par
+\par
+Pour ex\'e9cuter une fonction, on prend la variable bonjour qui lui fait r\'e9f\'e9rence et on lui accole des parenth\'e8ses.\par
+\par
+bonjour(); // La console affiche \ldblquote Bonjour!\rdblquote\par
+\par
+Une fonction peut aussi envoyer une valeur qui sera ainsi r\'e9cup\'e9r\'e9e \'e0 l\rquote endroit o\'f9 la fonction a \'e9t\'e9 lanc\'e9e.\par
+\par
+function bonjour()\{\par
+\par
+   return \ldblquote Bonjour!\rdblquote ;\par
+\par
+\}\par
+\par
+ \par
+\par
+salutations = bonjour();\par
+\par
+console.log(salutations); // Affiche \ldblquote Bonjour!\rdblquote\par
+\par
+ \par
+Ressources et lectures conseill\'e9es\par
+\par
+Dans le monde du d\'e9veloppement, il ne faut pas avoir peur de plonger dans des sites compl\'e8tement anglophones.\par
+\par
+Voici quelques livres qui vous aideront \'e0 parfaire vos connaissances:\par
+    JavaScript The Definitive Guide\par
+\par
+         JavaScript: The Good Parts\par
+    Javascript - Les bons \'e9l\'e9ments (version traduite de "Good Parts")\par
+    Eloquent JavaScript\par
+    Effective JavaScript\par
+\par
+Les sites de r\'e9f\'e9rence :\par
+\par
+    MDN - Javascript\par
+    OpenClassrooms\par
+    CodeAcademy\par
+    WebPlatform (cr\'e9e par le W3C)\par
+    HTML5Rocks\par
+\par
+Suivre sur les r\'e9seaux sociaux des d\'e9veloppeurs reconnus dans le milieu :\par
+\par
+        John Resig\par
+        Douglas Crockford\par
+        Brendan Eich\par
+        Paul Irish\par
+        David Walsh\par
+        Addy Osmani\par
+        et plein d'autres !\par
+\par
+    Demander sur irc (#javascript sur freenode)\par
+\par
+En gras, les ressources recommand\'e9es.\par
+\par
+Quantit\'e9 de sites fiables sont trouvables sur le net, soyez curieux!\par
+\par
+La logique et les conditions\par
+\par
+Les op\'e9rateurs logiques sont des op\'e9rateurs qui \'e9tablissent une liaison entre deux valeurs, ou effectuent une op\'e9ration sur une simple variable.\par
+Si l'on me demande de ramener des pommes et des poires\par
+\par
+pommes && poires\par
+\par
+et que je ne ram\'e8ne que des pommes ou des poires\par
+\par
+pommes || poires\par
+\par
+cela ne suffira pas.\par
+\par
+Je devrai ramener des pommes et des poires pour que l'expression se v\'e9rifie et devienne vraie.\par
+\par
+En calcul bool\'e9en, les valeurs n'ont que deux \'e9tats diff\'e9rents : true et false. Ils sont utilis\'e9es pour des op\'e9rations de logique.\par
+\par
+L'\'e9nonc\'e9 7 est plus grand que 8 est false, 10 est plus petit que 11 et 2000 plus grand que 1995 donne true.\par
+\par
+7 > 8; // Retourne false\par
+\par
+10 < 11 && 2000 > 1995; // Retourne true\par
+\par
+Op\'e9rateurs de comparaison\par
+// Toutes ces instructions retournent true\par
+\par
+6 > 5; // Plus grand que\par
+\par
+8 < 9; // Plus petit que\par
+\par
+6 >= 6; // Plus grand ou \'e9gal \'e0\par
+\par
+10 <= 11; // Plus petit ou \'e9gal \'e0\par
+\par
+"bonjour" =="bonjour";  // \'c9gal \'e0\par
+\par
+"bonjour" != "au revoir" // Diff\'e9rent de\par
+\par
+45 === 45 // Strictement \'e9gal \'e0 (compare la valeur et aussi le type de donn\'e9e)\par
+\par
+"bonjour" !== 2 // Strictement diff\'e9rent de\par
+\par
+ \par
+Op\'e9rateurs logiques\par
+// Toutes ces instructions retournent true\par
+\par
+5 > 6 && 8 < 9 // 5 plus grand que 6 ET 8 inf\'e9rieur \'e0 9\par
+\par
+texte = "bonjour";\par
+\par
+texte == "au revoir" || texte == "bonjour"; // texte est \'e9gal \'e0 "au revoir" OU texte est \'e9gal \'e0 "bonjour"\par
+// ! est un op\'e9rateur de n\'e9gation qui inverse la valeur\par
+\par
+!false == true\par
+\par
+!(6 < 4) // 6 NON PLUS PETIT QUE 4\par
+\par
+La comparaison if else\par
+Les instructions if et else servent \'e0 introduire des conditions pour permettre de n'ex\'e9cuter du code que si celles-ci sont satisfaites.\par
+\par
+Elles correspondent aux termes fran\'e7ais si et sinon.\par
+\par
+if(porte_verrouillee)\{\par
+\par
+   deverrouiller_porte();\par
+\par
+\}\par
+\par
+Peut se traduire par :\par
+\par
+Si la porte est verrouill\'e9e alors d\'e9verrouiller la porte.\par
+\par
+ \par
+\par
+if(melon)\{\par
+\par
+   manger_melon();\par
+\par
+\}\par
+\par
+else\{\par
+\par
+   manger_chips();\par
+\par
+\}\par
+\par
+Si j'ai du melon alors je le mange, sinon je mange des chips.\par
+\par
+ \par
+\par
+var frigo = \{\par
+\par
+   melon: 2\par
+\par
+   pasteque: 1,\par
+\par
+   parme: 0\par
+\par
+\};\par
+\par
+ \par
+\par
+if(frigo.melon && frigo.parme)\{ // SI j'ai du melon ET du jambon de parme, 0 correspond \'e0 false en bool\'e9en\par
+\par
+   manger(frigo.melon, frigo.parme);\par
+\par
+\}\par
+\par
+else if(frigo.fromage)\{ // SINON SI j'ai du fromage, retourne undefined qui correspond \'e0 false\par
+\par
+   manger(frigo.fromage):\par
+\par
+\}\par
+\par
+else\{ // SINON\par
+\par
+   if(frigo.pasteque)\{ // SI j'ai de la past\'e8que\par
+\par
+       manger(frigo.pasteque);\par
+\par
+   \}\par
+\par
+   else\{\par
+\par
+       manger("chips");\par
+\par
+   \}\par
+\par
+\}\par
+\par
+ \par
+\par
+Incr\'e9mentation et arithm\'e9tique\par
+Les op\'e9rateurs math\'e9matiques fonctionnent de la m\'eame mani\'e8re que sur une calculatrice.\par
+\par
+2 * 3 = 6\par
+\par
+12 - 2 * 3 = 6\par
+\par
+30 / 3 / 2 + 2 * 3 = 11\par
+\par
+L'incr\'e9mentation et la d\'e9cr\'e9mentation sont un raccourci pour ajouter ou soustraire une valeur \'e0 une variable.\par
+\par
+    ++ signifie rajouter 1 \'e0 la variable\par
+    -- signifie soustraire 1 \'e0 la variable\par
+    += permet de rajouter un nombre \'e0 une variable\par
+    -=, *=, /=, %= sont des d\'e9clinaisons de cet op\'e9rateur\par
+\par
+ heure = 5;\par
+\par
+heure++; // heure devient 6\par
+\par
+heure += 2; // heure devient 8\par
+\par
+heure /=2 // heure devient 4\par
+\par
+heure %= 3 // heure devient 1\par
+x++ et ++x ont le m\'eame r\'e9sultat \'e0 la diff\'e9rence pr\'e8s que x++ retourne la valeur de x AVANT d'effectuer l'op\'e9ration et ++x retourn la valeur de x APR\'c8S avoir effectu\'e9 l'op\'e9ration.\par
+\par
+x = 5;\par
+\par
+console.log(x++); // Donne 5 \'e0 console.log mais x est maintenant \'e9gal \'e0 6\par
+\par
+console.log(++x); // x est maintenant \'e9gal \'e0 7 et donne 7 \'e0 console.log\par
+ \par
+\par
+Tableaux et objets\par
+var mon_tableau = [10,20,30,40,50];\par
+\par
+var frigo = \{\par
+\par
+   fruits: ["banane", "mangue", "cerise"],\par
+\par
+   legumes: ["courgette", "tomate", "poireau"]\par
+\par
+\};\par
+\par
+ \par
+console.log(mon_tableau[2]); // Affiche 30\par
+\par
+console.log(frigo.fruits[0]); // Affiche "banane"\par
+\par
+var type = "legumes";\par
+\par
+console.log(frigo[type][1]); // Affiche tomate, si on utilise la notation par crochets [], on peut passer une variable \'e0 la place d'une cl\'e9\par
+.push() permet de rajouter un \'e9l\'e9ment \'e0 un tableau.\par
+\par
+mon_tableau.push(100);\par
+\par
+console.log(mon_tableau); // Affiche [10,20,30,40,50,100]\par
+\par
+ \par
+.pop() renvoie la derni\'e8re valeur du tableau tout en l'enlevant de celui-ci\par
+\par
+mon_tableau.push("banane"); // mon_tableau est maintenant \'e9gal \'e0 [10,20,30,40,50,100,"banane"]\par
+\par
+console.log(mon_tableau.pop()); // Affiche "banane", mon_tableau est maintenant \'e9gal \'e0 [10,20,30,40,50,100]\par
+\par
+Les boucles\par
+Les instructions for et while servent \'e0 r\'e9p\'e9ter une ou plusieurs lignes de code.\par
+\par
+for prend 3 param\'e8tres encadr\'e9s dans des parenth\'e8ses, suivis des instructions \'e0 ex\'e9cuter. Les param\'e8tres sont :\par
+\par
+    Initialisation : Ici on d\'e9clare la variable qui servira de compteur\par
+    Condition : Tant que cette condition est vraie, la boucle s'ex\'e9cutera\par
+    Expression finale : Expression qui est ex\'e9cut\'e9e \'e0 chaque fin de boucle\par
+\par
+for(var i = 0; i < 5; i++)\{\par
+\par
+console.log(i);\par
+\par
+\}\par
+\par
+Dans l'ordre :\par
+\par
+    Initialisation d'une variable i \'e9gale \'e0 0\par
+    Tant que i est inf\'e9rieure \'e0 5, on ex\'e9cute la boucle\par
+    A chaque fin de boucle, on incr\'e9mente i de 1\par
+\par
+Ici, la boucle sera ainsi ex\'e9cut\'e9e 5 fois , quand la variable i aura comme valeurs 0, 1, 2, 3 et 4.\par
+\par
+\'c0 5, la condition sera fausse et la boucle ne sera pas ex\'e9cut\'e9e.\par
+\par
+ \par
+\par
+tableau = [5,4,3,2,1]; // tableau.length permettra de r\'e9cup\'e9rer le nombre d'\'e9l\'e9ments que le tableau contient\par
+\par
+ \par
+\par
+for(var i = 0; i < tableau.length; i++)\{ // i aura successivement les valeurs 0,1,2,3,4. Il s'arr\'eatera \'e0 5 vu que la condition `5 < tableau.length` ne sera pas v\'e9rifi\'e9e\par
+\par
+   console.log(tableau[i]); // Afficher la valeur du tableau correspondante\par
+\par
+\}\par
+\par
+Ici, je parcours un tableau et affiche toutes ses valeurs.\par
+\par
+ \par
+\par
+while (tant que) d\'e9finit une liste d'instructions \'e0 ex\'e9cuter tant qu'une condition est vraie.\par
+\par
+var x = 0;\par
+\par
+while(x < 20)\{\par
+\par
+   x += 5;\par
+\par
+\}\par
+\par
+console.log(x);\par
+\par
+while ne prend qu'un seul param\'e8tre : la condition \'e0 v\'e9rifier. Tant qu'elle est fausse, la boucle est r\'e9ex\'e9cut\'e9e.\par
+\par
+Ici, la boucle sera ex\'e9cut\'e9e 5 fois et x aura comme valeur finale 20;\par
+\par
+ \par
+for...in permet de parcourir un objet.\par
+\par
+frigo = \{\par
+\par
+   fruits : ["pommes", "poires"],\par
+\par
+   legumes : ["tomates", "carottes"]\par
+\par
+\};\par
+\par
+ for(type in frigo)\{ // Parcourt chaque cl\'e9 de l'objet. type aura "fruits" et "legumes" comme valeurs\par
+\par
+   console.log(frigo[type]);\par
+\par
+\}\par
+\par
+ \par
+\par
+La port\'e9e des variables, et le mot-cl\'e9 var\par
+\par
+Une variable peut \'eatre globale ou avoir une port\'e9e limit\'e9e (scope).\par
+\par
+Quand une variable est d\'e9finie sans le mot-cl\'e9 var, elle est cr\'e9e dans l'objet window, qui a une port\'e9e globale.\par
+Une variable globale est accessible depuis n'importe quelle partie du code , m\'eame depuis une librairie tierce charg\'e9e pour d'autres fonctionnalit\'e9s.\par
+Elle est ainsi facilement \'e9crasable si le nom est trop commun.\par
+\par
+Ainsi, il faut toujours contr\'f4ler la port\'e9e de la variable (savoir quelle partie du code peut lire et r\'e9\'e9crire celle-ci).\par
+D\'e9clarer une variable avec var limite sa port\'e9e \'e0 la fonction actuelle et tous ses descendants.\par
+\par
+ \par
+function maFonction()\{\par
+\par
+   var locale = "Je suis une variable locale";\par
+\par
+   globale = "Je suis globale";\par
+\par
+ \par
+\par
+   console.log(locale); // Affiche "Je suis une variable locale"\par
+\par
+\}\par
+\par
+maFonction();\par
+\par
+console.log(globale); // Affiche "Je suis globale"\par
+\par
+console.log(locale); // Affiche une erreur, locale n'est pas accessible ici\par
+\par
+ \par
+\par
+Structuration de code Javascript\par
+Ne pas oublier ces r\'e8gles quand on d\'e9veloppe, quel que soit le langage :\par
+\par
+       Fractionner le probl\'e8me en petits morceaux et cr\'e9er des fonctions courtes\par
+        Si une fonction se charge de deux concepts diff\'e9rents, songer \'e0 la fractionner. Par exemple, si je veux cr\'e9er un slider, une partie du code s'occupera d'afficher les \'e9l\'e9ments et une autre g\'e9rera les interactions avec l'utilisateur. Si une seule fonction g\'e8re les deux, elle deviendra vite illisible.\par
+    Chaque ligne de code doit \'eatre clairement compr\'e9hensible, inutile d'utiliser des fonction alambiqu\'e9es.\par
+\par
+    Commenter g\'e9n\'e9reusement, utile pour la prochaine fois o\'f9 le d\'e9veloppeur relira son code ou se fera relire par quelqu'un d'autre.\par
+    Si possible, d\'e9clarer les variables (sans forc\'e9ment les initialiser) en haut de fonction permet d'avoir une vue globale de ce qu'elle fait.\par
+\par
+ \par
+\par
+ \par
+\par
+Le DOM\par
+\par
+Le DOM est une interface de d\'e9veloppement pour le HTML.\par
+Il repr\'e9sente la structure de la page et offre des methodes d\rquote acc\'e8s pour que le JavaScript puisse en modifier le contenu et le style.\par
+\par
+Chaque page charg\'e9e dans un navigateur a un objet document qui est le point d\rquote entr\'e9e vers le contenu.\par
+\par
+document.getElementById() est une m\'e9thode qui permet d\rquote acc\'e9der \'e0 un \'e9l\'e9ment \'e0 partir de son id.\par
+document.getElementsByClassName() permet de r\'e9cup\'e9rer une liste d\rquote\'e9l\'e9ments par leur classe.\par
+document.getElementsByTagName() permet, lui, de r\'e9cup\'e9rer une liste d\rquote\'e9l\'e9ments par leur nom de balise.\par
+\par
+Si on a un HTML qui contient les \'e9l\'e9ments suivants :\par
+\par
+<p id=\rdblquote bonjour\rdblquote >\par
+\par
+   Titre\par
+\par
+</p>\par
+\par
+<p class=\rdblquote contenu\rdblquote >\par
+\par
+   <span>Contenu</span>\par
+\par
+<p>\par
+\par
+<p class=\rdblquote contenu\rdblquote >\par
+\par
+   <span>Contenu 2</span>\par
+\par
+<p>\par
+\par
+On peut acc\'e9der \'e0 ces \'e9l\'e9ments de la mani\'e8re suivante :\par
+\par
+document.getElementById("bonjour"); // Retourne le premier paragraphe\par
+\par
+document.getElementsByClassName("contenu"); // Retourne les deuxi\'e8me et troisi\'e8me paragraphes\par
+\par
+document.getElementsByTagName("span"); // Retourne les deux span contenus dans les paragraphes\par
+\par
+ \par
+\par
+\f1\u9888?\f0  Contrairement \'e0 getElementsByClassName et getElementsByTagName qui retournent une liste d\rquote\'e9l\'e9ments, getElementById ne retourne qu\rquote un seul \'e9l\'e9ment.\par
+\par
+ \par
+\par
+Manipulation des contenus\par
+\par
+ \par
+\par
+ \par
+\par
+Un objet DOM est une repr\'e9sentation d\rquote un \'e9l\'e9ment HTML.\par
+Les propri\'e9t\'e9s de cet objet repr\'e9sentent les attributs de cet \'e9l\'e9ment.\par
+\par
+<a href="#top" id="link" class="ma_classe">Je suis un lien</a>\par
+\par
+mon_lien = document.getElementById("link");\par
+\par
+ \par
+\par
+console.log(mon_lien.href); // Affiche le lien vers lequel pointe le <a>\par
+\par
+console.log(mon_lien.id); // Affiche "link"\par
+\par
+console.log(mon_lien.className); // Une exception : l'attribut class se r\'e9cup\'e8re avec className\par
+\par
+ \par
+\par
+mon_lien.id = "nouvel_id"; // Modifie l\rquote id de l\rquote\'e9l\'e9ment en "nouvel_id"\par
+\par
+ \par
+\par
+La propri\'e9t\'e9 textContent contient le texte de l\rquote\'e9l\'e9ment.\par
+\par
+console.log(mon_lien.textContent); // Affiche "Je suis un lien"\par
+\par
+ \par
+\par
+mon_lien.textContent = "Bonjour! Je suis un lien"; // Modifie le contenu du <a>\par
+\par
+ \par
+\par
+La m\'e9thode document.createElement() permet de g\'e9n\'e9rer en m\'e9moire un nouvel \'e9l\'e9ment DOM que je peux ensuite modifier avec les m\'e9thodes vues pr\'e9c\'e9demment.\par
+\par
+mon_paragraphe = document.createElement("p");\par
+\par
+mon_paragraphe.id = "paragraph_id";\par
+\par
+mon_paragraphe.textContent = \ldblquote Je suis un paragraphe\rdblquote ;\par
+\par
+ \par
+\par
+appendChild() permet de rajouter un enfant \'e0 un \'e9l\'e9ment DOM.\par
+\par
+mon_lien.appendChild(mon_paragraphe); // Le <a> contient maintenant le <p> que j\rquote ai g\'e9n\'e9r\'e9\par
+\par
+ \par
+\par
+Manipulation des styles\par
+\par
+ \par
+\par
+ \par
+\par
+On a ici, un \'e9l\'e9ment p simple\par
+\par
+<p class="content big">Un paragraphe</p>\par
+\par
+un_paragraphe = document.getElementsByTagName("p")[0]; // Retourne le premier paragraphe de la liste des <p> de la page\par
+\par
+ \par
+\par
+La propri\'e9t\'e9 className permet de r\'e9cup\'e9rer toutes les classes de l\rquote\'e9l\'e9ment concern\'e9.\par
+\par
+console.log(un_paragraphe.className); // Affiche "content big"\par
+\par
+un_paragraphe.className = "content small";\par
+\par
+Puisque className retourne toutes les classes de l\rquote\'e9l\'e9ment, si on doit modifier une classe, il faut r\'e9\'e9crire le nom en entier.\par
+\par
+ \par
+\par
+Il est aussi possible d\rquote acc\'e9der \'e0 tous les styles de l\rquote\'e9l\'e9ment par des propri\'e9t\'e9s sp\'e9cifiques.\par
+Ces propri\'e9t\'e9s ont les m\'eames noms que leurs \'e9quivalents CSS \'e0 la diff\'e9rence pr\'e8s qu\rquote ils sont \'e9crits en camelCase (pas s\'e9par\'e9s par des tirets et chaque mot prend une majuscule sauf le premier).\par
+\par
+un_paragraphe.style.backgroundColor = "#ff0000"; // Correspond au CSS "background-color : #ff0000"\par
+\par
+un_paragraphe.style.fontSize = "40px"; // Correspond \'e0 "font-size : 40px"\par
+\par
+console.log(un_paragraphe.style.backgroundColor); // Affiche "#ff0000"\par
+\par
+ \par
+\par
+Les \'e9v\'e9nements\par
+\par
+ \par
+\par
+ \par
+\par
+La plupart des int\'e9ractions de l\rquote utilisateur avec la page Web peuvent \'eatre intercept\'e9es et une action lanc\'e9e en retour.\par
+On peut dire \'e0 une fonction de s'ex\'e9cuter quand l'utilisateur clique sur un bouton ou bien quand il scroll la fen\'eatre ou encore quand il appuie sur une touche du clavier.\par
+\par
+En fonction du type d\rquote\'e9v\'e9nement que l\rquote on souhaite, plusieurs possibilit\'e9s :\par
+\par
+ \par
+\par
+    mouse (souris):\par
+\par
+    click : au clic sur un \'e9l\'e9ment\par
+\par
+    mouseenter : la souris passe par dessus la zone qu\rquote occupe un \'e9l\'e9ment\par
+\par
+    mouseleave : la souris sort de cette zone\par
+\par
+    keyboard (clavier)\par
+\par
+    keydown : une touche du clavier est enfonc\'e9e\par
+\par
+    keyup : une touche a \'e9t\'e9 relach\'e9e\par
+\par
+    fen\'eatre (window)\par
+\par
+    scroll : d\'e9filement de la fen\'eatre\par
+\par
+    resize : redimensionnement de la fen\'eatre\par
+\par
+    form (formulaires)\par
+\par
+    change : pour les \'e9l\'e9ments <input>, <select> et <textarea>, quand l\rquote utilisateur change une de leurs valeurs\par
+\par
+    submit : \'e0 l\rquote envoi d\rquote un formulaire\par
+\par
+    document\par
+\par
+ \par
+\par
+        DOMContentLoaded : lanc\'e9 quand le document HTML est compl\'e8tement charg\'e9 et analys\'e9 sans attendre que les images et les CSS soient charg\'e9s\par
+\par
+ \par
+\par
+ \par
+\par
+ \par
+\par
+Les \'e9couteurs d'\'e9v\'e8nements \par
+\par
+Pour d\'e9clarer un \'e9couteur d\rquote\'e9v\'e9nement qui se chargera de lancer une action pour un \'e9v\'e9nement donn\'e9, il y avait une syntaxe qui est aujourd\rquote hui d\'e9suette :\par
+\par
+<a href=\rdblquote #\rdblquote  onclick=\rdblquote action()\rdblquote >\par
+\par
+   Lien\par
+\par
+</a>\par
+\par
+ou bien\par
+\par
+mon_element.onclick = action;\par
+\par
+ \par
+\par
+Pour attacher un \'e9v\'e9n\'e9ment \'e0 un \'e9l\'e9ment, on pr\'e9f\'e9rera la syntaxe moderne\par
+\par
+mon_element.addEventListener(type, action);\par
+\par
+ \par
+\par
+<form>\par
+\par
+   <input type=\rdblquote text\rdblquote  id=\rdblquote mon_input\rdblquote  />\par
+\par
+</form>\par
+\par
+ \par
+\par
+<a href=\rdblquote #\rdblquote  id=\rdblquote mon_lien\rdblquote >\par
+\par
+   Lien\par
+\par
+</a>\par
+\par
+var mon_input = document.getElementById("mon_input"),\par
+\par
+   mon_lien = document.getElementById("mon_lien"); // Je stocke les \'e9l\'e9ments dans des variables\par
+\par
+ \par
+\par
+var mon_action = function()\{ // D\'e9finition d'une fonction qui sera associ\'e9e plus loin \'e0 un \'e9v\'e9nement sur un \'e9l\'e9ment\par
+\par
+   console.log(mon_input.value); // Affiche ce que l\rquote utilisateur a \'e9crit\par
+\par
+\}\par
+\par
+ \par
+\par
+var action_clic = function()\{ // D\'e9finition d'une fonction qui sera associ\'e9e plus loin \'e0 un \'e9v\'e9nement sur un \'e9l\'e9ment\par
+\par
+   console.log("Clic!");\par
+\par
+\}\par
+\par
+ \par
+\par
+// Association des \'e9v\'e9nements avec addEventListener\par
+\par
+mon_input.addEventListener("change", mon_action);\par
+\par
+mon_lien.addEventListener("click", action_clic);\par
+\par
+\f1\u9888?\f0  Attention, dans le addEventListener, il faut donner la r\'e9f\'e9rence de la fonction (mon_action) et non le r\'e9sultat de l'ex\'e9cution de la fonction (mon_action() ).\par
+\par
+ \par
+\par
+Pour d\'e9tacher les \'e9couteurs d\rquote\'e9v\'e9nements, il suffit d\rquote utiliser removeEventListener avec la r\'e9f\'e9rence \'e0 la fonction qu\rquote on souhaite ne plus ex\'e9cuter.\par
+\par
+mon_lien.removeEventListener("click", action_clic);\par
+\par
+ \par
+\par
+Gestion du temps\par
+\par
+ \par
+\par
+ \par
+\par
+setTimeout permet de sp\'e9cifier une fonction \'e0 ex\'e9cuter au bout d\rquote une dur\'e9e d\'e9finie.\par
+\par
+function mon_action()\{\par
+\par
+   console.log(\ldblquote Bonjour\rdblquote );\par
+\par
+\}\par
+\par
+ \par
+\par
+setTimeout(mon_action); // Dans son expression la plus simple, setTimeout ex\'e9cute une fonction d\'e8s que possible\par
+\par
+setTimeout(mon_action, 1000); // En lui sp\'e9cifiant un nombre, on indique la dur\'e9e (en millisecondes) au bout de laquelle on veut ex\'e9cuter la fonction\par
+\par
+ \par
+\par
+var id_timeout = setTimeout(mon_action, 1000); // La fonction setTimeout retourne un identifiant qui fait r\'e9f\'e9rence au compteur\par
+\par
+ \par
+\par
+setInterval est une version plus sophistiqu\'e9e de setTimeout.\par
+Au lieu de sp\'e9cifier la dur\'e9e au bout de laquelle la fonction s\rquote\'e9x\'e9cuter, on dit \'e0 la fonction de s\rquote\'e9x\'e9cuter toutes les x millisecondes.\par
+\par
+var id_interval = setInterval(mon_action, 1000); // mon_action sera ex\'e9cut\'e9e toutes les secondes\par
+\par
+ \par
+\par
+clearInterval permet de stopper l\rquote ex\'e9cution de la fonction d\'e9finie par setInterval.\par
+\par
+clearInterval(id_interval); // Sp\'e9cifier la r\'e9f\'e9rence du compteur qu\rquote on aura pr\'e9alablement sauvegard\'e9e\par
+\par
+ \par
+\par
+On peut, avec ces fonction, fabriquer un compteur simplement\par
+\par
+var i = 10;\par
+\par
+ \par
+\par
+var id_interval = setInterval(function()\{ // Sauvegarder la r\'e9f\'e9rence au compteur\par
+\par
+   if(i < 0)\{ // Si la variable est inf\'e9rieure \'e0 0, on arr\'eate le compteur\par
+\par
+       clearInterval(id_interval); // Supprimer le compteur\par
+\par
+   \}\par
+\par
+   else\{\par
+\par
+       console.log(i);\par
+\par
+       i--; // Sinon, d\'e9cr\'e9menter la variable\par
+\par
+   \}\par
+\par
+\}, 1000); // Toutes les secondes\par
+\par
+ \par
+}
+ 
